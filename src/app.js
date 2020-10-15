@@ -6,6 +6,7 @@ const weatherInfo = require('./utils/WeatherInfo');
 
 
 const server = express();
+const Port = process.env.PORT || 3000;
 
 //paths.
 const publicFolder = path.join(__dirname,'../public')
@@ -93,7 +94,7 @@ server.get('*',(req,res)=>{
     })
 })
 
-server.listen(3000,()=>{
+server.listen(Port,()=>{
     console.log('Server is Started at port 3000 !');
 })
 
